@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon1-Photoroom.png" type="image/x-icon">
+    <title>MEATY MARVELS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navigation bar section -->
+     <nav class="navbar" id="navbar">
+        <h1><a href="#">MEATY MARVELS</a></h1>
+        <ul class="navitems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+        <div class="toggle" id="toggle"><i class="fa-solid fa-bars" onclick="showNavbar()"></i></div>
+     </nav>
+     <!-- side navigation bar -->
+     <div class="side-navbar">
+        <p id="close-toggle" ><i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+        </p>
+        <ul class="side-navitems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+     </div>
+
+     <!-- home section -->
+      <div class="home" id="home">
+        <div class="home-text">
+        <h1 style="color: var(--orange);">Welcome to Meaty Marvels</h1><br>
+        <br>
+        <p style="color: var(--white);">where every bite is a masterpiece! Dive into a world of flavors,<br>
+        succulent meats, crafted to tantalize your taste buds.</p>
+        <br>
+        <br>
+        <p style="color: var(--white);">At Meaty Marvels, it's not just food – it's an experience!</p>
+        <br>
+        <button id="menulist" onclick="menuPage()">GO TO MENU</button>
+        </div>
+        <div class="home-image">
+            <img src="images/home-Photoroom.png" alt="">
+        </div>
+      </div>
+
+      <!-- About section -->
+      <div class="about" id="about">
+        <h1 class="heading">ABOUT US</h1>
+        <div class="about-con">
+          <div class="about-image">
+            <img src="images/about.png" alt="">
+          </div>
+          <div class="about-text">
+            <h2>MEATY MARVELS</h2>
+            <p>At Meaty Marvels, we believe that every meal should be an adventure worth savoring.<br>
+              Our journey began with a simple idea: to bring the joy of premium, perfectly prepared meats to food lovers everywhere.<br> 
+              With a commitment to quality, flavor, and innovation, <br>
+              we’ve grown into a destination for those who crave unforgettable dining experiences.</p>
+            <br>
+            <p>Every dish we serve is crafted with care, using the finest ingredients and our signature blend of spices and techniques.<br>
+              Whether you’re a connoisseur of smoky barbecue, tender steaks, or gourmet burgers, Meaty Marvels is your go-to haven for indulgence.<br>
+              Join us as we celebrate the art of meaty excellence—because at Meaty Marvels, we’re more than a kitchen.<br>
+              we’re a community of flavor enthusiasts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- our team section -->
+       <div class="team">
+        <h1>MEET OUR TEAM</h1>
+        <div class="team-container">
+        <div class="team-con">
+          <img src="images/chefs/avatar-1.jpg" alt="">
+          <h3 style="color: var(--orange);">Chef Amelia Gusteau</h3>
+          <h5>Head Chef</h5>
+          <p>Culinary innovator crafting gourmet meat dishes with expert seasoning, blending tradition and innovation for exceptional flavors.</p>
+        </div>
+        <div class="team-con">
+          <img src="images/chefs/avatar-2.jpg" alt="">
+          <h3 style="color: var(--orange);">Chef Marco Sizzle</h3>
+          <h5>Grill Master Extraordinaire</h5>
+          <p>Grill master specializing in flame-cooked meats, bold rubs, and marinades, transforming simple cuts into unforgettable feasts.</p>
+        </div>
+        <div class="team-con">
+          <img src="images/chefs/avatar-3.jpg" alt="">
+          <h3 style="color: var(--orange);">Chef Leo Flare</h3>
+          <h5>Burger and Pizza Specialist</h5>
+          <p>Creative burger and pizza specialist, combining perfect dough, juicy patties, and fresh toppings for unforgettable comfort food delights.</p>
+        </div>
+        </div>
+       </div>
+
+      <!-- Contact section -->
+       <div class="contact" id="Contact">
+        <div class="con-image">
+          <img src="images/contact icon.png" alt="">
+        </div>
+        <div class="contact-place">
+          <h2 style="color:var(--black)">MAIN BRANCHES</h2>
+          <h4>CHENNAI</h4>
+          <h4>COIMBATORE</h4>
+          <h4>ERODE</h4>
+          <h4>SELAM</h4>
+          <h4>THENI</h4>
+        </div>
+        <div class="contact-links">
+          <h2 style="color:var(--black)">CONNECT</h2>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="top-links">
+          <h2 style="color:var(--black)">Links</h2>
+          <ul class="top-navitems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+        </div>
+       </div>
+
+       <!-- footer section -->
+        <div class="footer">
+          <h5 style="font-size: 12px;">Meaty Marvels</h5>&nbsp;
+          <p style="font-size: 12px;">@2024.All Rights Reserved.</p>
+        </div>
+
+        <!-- Top section button -->
+         <div class="top-btn">
+          <a class="btntop" id="btntop" href="#"><i class="fa-solid fa-angle-up"></i></a>
+         </div>
+
+
+     <script src="scrpit.js"></script>
+  </body>
+</html>

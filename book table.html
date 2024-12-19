@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon1-Photoroom.png" type="image/x-icon">
+    <title>MEATY MARVELS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navigation bar section -->
+     <nav class="navbar" id="navbar">
+        <h1><a href="#">MEATY MARVELS</a></h1>
+        <ul class="navitems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+        <div class="toggle" id="toggle"><i class="fa-solid fa-bars" onclick="showNavbar()"></i></div>
+     </nav>
+     <!-- side navigation bar -->
+     <div class="side-navbar">
+        <p id="close-toggle" ><i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+        </p>
+        <ul class="side-navitems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+     </div>
+
+     <!-- book a table form section -->
+      <div class="table">
+        <div class="table-con">
+            <h2>RESERVE A TABLE</h2>
+            <form class="table-form">
+            <input type="text" placeholder="ENTER YOUR NAME" required>
+            <input type="text" placeholder = "HOW MANY PEOPLE" required>
+            <input type="datetime-local" required>
+            <input type="text" placeholder="MESSAGE\SPECIAL REQUIREMENTS" required>
+            <button id="form-button">SEND MESSAGE</button>
+            </form>
+        </div>
+      </div>
+
+      <!-- Contact section -->
+       <div class="contact" id="Contact">
+        <div class="con-image">
+          <img src="images/contact icon.png" alt="">
+        </div>
+        <div class="contact-place">
+          <h2 style="color:var(--black)">MAIN BRANCHES</h2>
+          <h4>CHENNAI</h4>
+          <h4>COIMBATORE</h4>
+          <h4>ERODE</h4>
+          <h4>SELAM</h4>
+          <h4>THENI</h4>
+        </div>
+        <div class="contact-links">
+          <h2 style="color:var(--black)">CONNECT</h2>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="top-links">
+          <h2 style="color:var(--black)">Links</h2>
+          <ul class="top-navitems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+        </div>
+       </div>
+
+       <!-- footer section -->
+        <div class="footer">
+          <h5 style="font-size: 12px;">Meaty Marvels</h5>&nbsp;
+          <p style="font-size: 12px;">@2024.All Rights Reserved.</p>
+        </div>
+
+        <!-- Top section button -->
+         <div class="top-btn">
+          <a class="btntop" id="btntop" href="#"><i class="fa-solid fa-angle-up"></i></a>
+         </div>
+
+
+     <script src="scrpit.js"></script>
+  </body>
+</html>

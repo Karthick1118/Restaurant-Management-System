@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon1-Photoroom.png" type="image/x-icon">
+    <title>MEATY MARVELS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navigation bar section -->
+     <nav class="navbar" id="navbar">
+        <h1><a href="#">MEATY MARVELS</a></h1>
+        <ul class="navitems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#" onclick="showCart()">Cart</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+            <button class="booktable" id="book-table">BOOK A TABLE</button>
+        </ul>
+        <div class="toggle" id="toggle"><i class="fa-solid fa-bars" onclick="showNavbar()"></i></div>
+     </nav>
+     <!-- side navigation bar -->
+     <div class="side-navbar">
+        <p id="close-toggle" ><i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+        </p>
+        <ul class="side-navitems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#" onclick="showCart()">Cart</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+            <button class="booktable" id="book-table">BOOK A TABLE</button>
+        </ul>
+     </div>
+
+     <!-- add to cart section -->
+      <div class="cart" id="carts">
+        <div class="cart-con">
+        <p><i class="fa-regular fa-circle-xmark" onclick="closeCart()"></i></p>
+        <h2>ADD TO CART</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>PRICE</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody id="cartbody"></tbody>
+        </table>
+        <p class="total" id="cart-total">Total: $0</p>
+        <br>
+        <p class="placeorder"><button id="place-order">PLACE THE ORDER</button></p>
+        </div>
+      </div>
+
+      <!-- menu search section -->
+       <div class="searchbar">
+        <form class="search">
+            <input type="text" placeholder="search" id="searchbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+       </div>
+
+       <!-- menu catagory section -->
+        <div class="catagory">
+            <div class="catagory-list">
+                <p><button id="allMenu" onclick="showMenu()">ALL MENU</button></p>
+                <p><button id="burger" onclick="showBurger()">BURGER</button></p>
+                <p><button id="pizza" onclick="showPizza()">PIZZA</button></p>
+                <p><button id="chicken" onclick="showChicken()">CHICKEN</button></p>
+                <p><button id="combos" onclick="showCombo()">COMBOS</button></p>
+                <p><button id="drinks" onclick="showDrink()">DRINKS</button></p>
+            </div>
+        </div>
+
+        <!-- allmenu section -->
+         <div class="menulist">
+            <div class="menu-con" id="menu-container">
+                <div class="food-con">
+                    <img src="images/burger/veg hamburger-Photoroom.png" alt="">
+                    <h4>VEG BURGER</h4>
+                    <h5>$100</h5>
+                    <button onclick="addToCart('VEG BURGER', 100)" id="orderbutton">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/burger/double veg burger-Photoroom.png" alt="">
+                    <h4>DOUBLE VEG BURGER</h4>
+                    <h5>$150</h5>
+                    <button onclick="addToCart('DOUBLE VEG BURGER', 150)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/burger/chicken burger-Photoroom.png" alt="">
+                    <h4>CHICKEN BURGER</h4>
+                    <h5>$200</h5>
+                    <button onclick="addToCart('CHICKEN BURGER', 200)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/burger/double chicken burger-Photoroom.png" alt="">
+                    <h4>DOUBLE CHICKEN BURGER</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('DOUBLE CHICKEN BURGER', 250)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/burger/mutton burger-Photoroom.png" alt="">
+                    <h4>MUTTON BURGER</h4>
+                    <h5>$300</h5>
+                    <button onclick="addToCart('MUTTON BURGER', 300)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/burger/Me chicken Burger-Photoroom.png" alt="">
+                    <h4>ME CHICKEN BURGER</h4>
+                    <h5>$280</h5>
+                    <button onclick="addToCart('ME CHICKEN BURGER', 280)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/burger/french-fries2-Photoroom.png" alt="">
+                    <h4>FRENCH FRIES</h4>
+                    <h5>$80</h5>
+                    <button onclick="addToCart('FRENCH FRIES', 80)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/pizza/veg pizza-Photoroom.png" alt="">
+                    <h4>VEG PIZZA</h4>
+                    <h5>$150</h5>
+                    <button onclick="addToCart('VEG PIZZA', 150)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/pizza/veggie pizza-Photoroom.png" alt="">
+                    <h4>VEGGIE PIZZA</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('VEGGIE PIZZA', 250)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/pizza/BBQ Chicken Pizza-Photoroom.png" alt="">
+                    <h4>BBQ CHICKEN PIZZA</h4>
+                    <h5>$300</h5>
+                    <button onclick="addToCart('BBQ CHICKEN PIZZA', 300)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/pizza/Pizza Margherita-Photoroom.png" alt="">
+                    <h4>MARGHERITA PIZZA</h4>
+                    <h5>$400</h5>
+                    <button onclick="addToCart('MARGHERITA PIZZA', 400)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/pizza/meat pizza-Photoroom.png" alt="">
+                    <h4>MUTTON PIZZA</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('MUTTON PIZZA', 250)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/pizza/chicken pizza-Photoroom.png" alt="">
+                    <h4>CHICKEN PIZZA</h4>
+                    <h5>$300</h5>
+                    <button onclick="addToCart('CHICKEN PIZZA', 300)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/sandwich/bread sandwich-Photoroom.png" alt="">
+                    <h4>BREAD SANDWICH</h4>
+                    <h5>$200</h5>
+                    <button onclick="addToCart('BREAD SANDWICH', 200)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/sandwich/chicken sandwich-Photoroom.png" alt="">
+                    <h4>CHICKEN SANDWICH</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('CHICKEN SANDWICH', 250)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/chicken/chicken-wings-Photoroom.png" alt="">
+                    <h4>CHICKEN WINGS</h4>
+                    <h5>$150</h5>
+                    <button  onclick="addToCart('CHICKEN WINGS', 150)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/chicken/fried-chicken-Photoroom.png" alt="">
+                    <h4>FRIED CHICKEN</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('FRIED CHICKEN', 250)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/chicken/grill chicken-Photoroom.png" alt="">
+                    <h4>GRILL CHICKEN</h4>
+                    <h5>$500</h5>
+                    <button onclick="addToCart('GRILL CHICKEN', 500)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/chicken/tandoori-Photoroom.png" alt="">
+                    <h4>TANDOORI CHICKEN</h4>
+                    <h5>$500</h5>
+                    <button onclick="addToCart('TANDOORI CHICKEN', 500)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/combo/burger-fries combo-Photoroom.png" alt="">
+                    <h4>BURGER FRIES COMBO</h4>
+                    <h5>$280</h5>
+                    <button onclick="addToCart('BURGER FRIES COMBO', 280)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/combo/bucket combo-Photoroom.png" alt="">
+                    <h4>FRIED CHICKEN BUCKET</h4>
+                    <h5>$400</h5>
+                    <button onclick="addToCart('FRIED CHICKEN BUCKET', 400)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/juice/coke-Photoroom.png" alt="">
+                    <h4>COKE</h4>
+                    <h5>$80</h5>
+                    <button onclick="addToCart('COKE', 80)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/juice/lemon juice-Photoroom.png" alt="">
+                    <h4>LEMON JUICE</h4>
+                    <h5>$70</h5>
+                    <button onclick="addToCart('LEMON JUICE', 70)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/juice/strawberry-Photoroom.png" alt="">
+                    <h4>STRAWBERRY JUICE</h4>
+                    <h5>$100</h5>
+                    <button onclick="addToCart('STRAWBERRY JUICE', 100)">ORDER</button>
+                </div>
+            </div>
+         </div>
+
+         <!-- Burger section -->
+         <div class="burger-menulist">
+            <div class="burger-menu-con" id="burger-menu-container">
+                <div class="burger-food-con">
+                    <img src="images/burger/veg hamburger-Photoroom.png" alt="">
+                    <h4>VEG BURGER</h4>
+                    <h5>$100</h5>
+                    <button onclick="addToCart('VEG BURGER' , 100)">ORDER</button>
+                </div>
+                <div class="food-con">
+                    <img src="images/burger/double veg burger-Photoroom.png" alt="">
+                    <h4>DOUBLE VEG BURGER</h4>
+                    <h5>$150</h5>
+                    <button onclick="addToCart('DOUBLE CHICKEN BURGER' , 150)">ORDER</button>
+                </div>
+                <div class="burger-food-con">
+                    <img src="images/burger/chicken burger-Photoroom.png" alt="">
+                    <h4>CHICKEN BURGER</h4>
+                    <h5>$200</h5>
+                    <button onclick="addToCart('CHICKEN BURGER' , 200)">ORDER</button>
+                </div>
+                <div class="burger-food-con">
+                    <img src="images/burger/double chicken burger-Photoroom.png" alt="">
+                    <h4>DOUBLE CHICKEN BURGER</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('DOUBLE CHICKEN BURGER' , 250)">ORDER</button>
+                </div>
+                <div class="burger-food-con">
+                    <img src="images/burger/mutton burger-Photoroom.png" alt="">
+                    <h4>MUTTON BURGER</h4>
+                    <h5>$300</h5>
+                    <button onclick="addToCart('MUTTON BURGER' , 300)">ORDER</button>
+                </div>
+                <div class="burger-food-con">
+                    <img src="images/burger/Me chicken Burger-Photoroom.png" alt="">
+                    <h4>ME CHICKEN BURGER</h4>
+                    <h5>$280</h5>
+                    <button onclick="addToCart('ME CHICKEN BURGER' , 280)">ORDER</button>
+                </div>
+                <div class="burger-food-con">
+                    <img src="images/burger/french-fries2-Photoroom.png" alt="">
+                    <h4>FRENCH FRIES</h4>
+                    <h5>$80</h5>
+                    <button onclick="addToCart('FRENCH FRIES' , 80)">ORDER</button>
+                </div>
+            </div>
+         </div>
+
+         <!-- pizza section -->
+         <div class="pizza-menulist">
+            <div class="pizza-menu-con" id="pizza-menu-container">
+                <div class="pizza-food-con">
+                    <img src="images/pizza/veg pizza-Photoroom.png" alt="">
+                    <h4>VEG PIZZA</h4>
+                    <h5>$150</h5>
+                    <button onclick="addToCart('VEG PIZZA' , 150)">ORDER</button>
+                </div>
+                <div class="pizza-food-con">
+                    <img src="images/pizza/veggie pizza-Photoroom.png" alt="">
+                    <h4>VEGGIE PIZZA</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('VEGGIE PIZZA' , 250)">ORDER</button>
+                </div>
+                <div class="pizza-food-con">
+                    <img src="images/pizza/BBQ Chicken Pizza-Photoroom.png" alt="">
+                    <h4>BBQ CHICKEN PIZZA</h4>
+                    <h5>$300</h5>
+                    <button onclick="addToCart('BBQ CHICKEN PIZZA' , 300)">ORDER</button>
+                </div>
+                <div class="pizza-food-con">
+                    <img src="images/pizza/Pizza Margherita-Photoroom.png" alt="">
+                    <h4>MARGHERITA PIZZA</h4>
+                    <h5>$400</h5>
+                    <button onclick="addToCart('MARGHERITA PIZZA' , 400)">ORDER</button>
+                </div>
+                <div class="pizza-food-con">
+                    <img src="images/pizza/meat pizza-Photoroom.png" alt="">
+                    <h4>MUTTON PIZZA</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('MUTTON PIZZA' , 250)">ORDER</button>
+                </div>
+                <div class="pizza-food-con">
+                    <img src="images/pizza/chicken pizza-Photoroom.png" alt="">
+                    <h4>CHICKEN PIZZA</h4>
+                    <h5>$300</h5>
+                    <button onclick="addToCart('CHICKEN PIZZA' , 300)">ORDER</button>
+                </div>
+                <div class="pizza-food-con">
+                    <img src="images/sandwich/bread sandwich-Photoroom.png" alt="">
+                    <h4>BREAD SANDWICH</h4>
+                    <h5>$200</h5>
+                    <button onclick="addToCart('BREAD SANDWICH' , 200)">ORDER</button>
+                </div>
+                <div class="pizza-food-con">
+                    <img src="images/sandwich/chicken sandwich-Photoroom.png" alt="">
+                    <h4>CHICKEN SANDWICH</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('CHICKEN SANDWICH' , 250)">ORDER</button>
+                </div>
+            </div>
+         </div> 
+
+         <!-- chicken section -->
+         <div class="chicken-menulist">
+            <div class="chicken-menu-con" id="chicken-menu-container">
+                <div class="chicken-food-con">
+                    <img src="images/chicken/chicken-wings-Photoroom.png" alt="">
+                    <h4>CHICKEN WINGS</h4>
+                    <h5>$150</h5>
+                    <button onclick="addToCart('CHICKEN WINGS' , 150)">ORDER</button>
+                </div>
+                <div class="chicken-food-con">
+                    <img src="images/chicken/fried-chicken-Photoroom.png" alt="">
+                    <h4>FRIED CHICKEN</h4>
+                    <h5>$250</h5>
+                    <button onclick="addToCart('FRIED CHICKEN' , 250)">ORDER</button>
+                </div>
+                <div class="chicken-food-con">
+                    <img src="images/chicken/grill chicken-Photoroom.png" alt="">
+                    <h4>GRILL CHICKEN</h4>
+                    <h5>$500</h5>
+                    <button onclick="addToCart('GRILL CHICKEN' , 500)">ORDER</button>
+                </div>
+                <div class="chicken-food-con">
+                    <img src="images/chicken/tandoori-Photoroom.png" alt="">
+                    <h4>TANDOORI CHICKEN</h4>
+                    <h5>$500</h5>
+                    <button onclick="addToCart('TANDOORI CHICKEN' , 500)">ORDER</button>
+                </div>
+            </div>
+         </div>
+
+         <!-- combos section -->
+         <div class="combo-menulist">
+            <div class="combo-menu-con" id="combo-menu-container">
+                <div class="combo-food-con">
+                    <img src="images/combo/burger-fries combo-Photoroom.png" alt="">
+                    <h4>BURGER FRIES COMBO</h4>
+                    <h5>$280</h5>
+                    <button onclick="addToCart('BURGER FRIES COMBO' , 280)">ORDER</button>
+                </div>
+                <div class="combo-food-con">
+                    <img src="images/combo/bucket combo-Photoroom.png" alt="">
+                    <h4>FRIED CHICKEN BUCKET</h4>
+                    <h5>$400</h5>
+                    <button onclick="addToCart('FRIED CHICKEN BUDGET' , 400)">ORDER</button>
+                </div>
+            </div>
+         </div>
+
+         <!-- drinks section -->
+         <div class="drink-menulist">
+            <div class="drink-menu-con" id="drink-menu-container">
+                <div class="drink-food-con">
+                    <img src="images/juice/coke-Photoroom.png" alt="">
+                    <h4>COKE</h4>
+                    <h5>$80</h5>
+                    <button onclick="addToCart('COKE' , 80)">ORDER</button>
+                </div>
+                <div class="drink-food-con">
+                    <img src="images/juice/lemon juice-Photoroom.png" alt="">
+                    <h4>LEMON JUICE</h4>
+                    <h5>$70</h5>
+                    <button onclick="addToCart('LEMON JUICE' , 70)">ORDER</button>
+                </div>
+                <div class="drink-food-con">
+                    <img src="images/juice/strawberry-Photoroom.png" alt="">
+                    <h4>STRAWBERRY JUICE</h4>
+                    <h5>$100</h5>
+                    <button onclick="addToCart('STRAWBERRY' , 100)">ORDER</button>
+                </div>
+            </div>
+         </div>
+
+
+      <!-- Contact section -->
+       <div class="contact" id="Contact">
+        <div class="con-image">
+          <img src="images/contact icon.png" alt="">
+        </div>
+        <div class="contact-place">
+          <h2 style="color:var(--black)">MAIN BRANCHES</h2>
+          <h4>CHENNAI</h4>
+          <h4>COIMBATORE</h4>
+          <h4>ERODE</h4>
+          <h4>SELAM</h4>
+          <h4>THENI</h4>
+        </div>
+        <div class="contact-links">
+          <h2 style="color:var(--black)">CONNECT</h2>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="top-links">
+          <h2 style="color:var(--black)">Links</h2>
+          <ul class="top-navitems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locate.html">Locate Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+        </div>
+       </div>
+
+       <!-- footer section -->
+        <div class="footer">
+          <h5 style="font-size: 12px;">Meaty Marvels</h5>&nbsp;
+          <p style="font-size: 12px;">@2024.All Rights Reserved.</p>
+        </div>
+
+        <!-- Top section button -->
+         <div class="top-btn">
+          <a class="btntop" id="btntop" href="#"><i class="fa-solid fa-angle-up"></i></a>
+         </div>
+
+
+     <script src="menu.js"></script>
+  </body>
+</html>
